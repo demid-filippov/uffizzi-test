@@ -1,6 +1,6 @@
 x-uffizzi:
   ingress:
-    service: app
+    service: grafana
     port: 3000
 
 services:
