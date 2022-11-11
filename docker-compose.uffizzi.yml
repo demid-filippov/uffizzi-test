@@ -1,0 +1,13 @@
+x-uffizzi:
+  ingress:
+    service: app
+    port: 3000
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - 3000:3000
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=secret
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
